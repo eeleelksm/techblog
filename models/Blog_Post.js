@@ -2,7 +2,6 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Blog_Post extends Model {
-
 }
 
 // create fields/columns for Post model
@@ -15,6 +14,10 @@ Blog_Post.init(
       autoIncrement: true
     },
     title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    blog_text: {
       type: DataTypes.STRING,
       allowNull: false
     },
