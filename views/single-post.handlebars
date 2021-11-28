@@ -1,0 +1,13 @@
+<article class="post">
+  <div class="title is-size-5 m-0 mt-3">
+    {{post.title}}
+  </div>
+  <div>
+    {{post.blog_text}}
+  </div>
+  <div class="meta is-size-7">
+    By {{post.user.username}} on {{post.created_at}}
+    <a href="/post/{{id}}">{{post.comments.length}} comment(s)</a>
+  </div>
+</article>
+</li>
