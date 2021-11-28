@@ -9,6 +9,8 @@ html {
 header {
   font-family: 'Montserrat', sans-serif;
   border-bottom: 2px solid darkblue;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {
