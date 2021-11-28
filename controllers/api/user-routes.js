@@ -84,6 +84,20 @@ router.post('/login', (req, res) => {
   });
 });
 
+// route to find the user wuth email and password
+router.post('/signup', (req, res) => {
+  User.create({
+    username: req.body.username,
+    email: req.body.email,
+    password: req.body.password
+  })
+  .then(dbUserData => res.json(dbUserData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
+});
+
 // PUT /api/users/1
 router.put('/:id', (req, res) => {
   User.update(req.body, {
