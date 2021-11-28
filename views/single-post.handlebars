@@ -12,6 +12,7 @@
 </article>
 
 {{!-- Comment form --}}
+{{#if loggedIn}}
   <form class="comment-form mt-5 p-3 ml-3">
   <div>
     <textarea name="comment-body" class="textarea columns is-small"></textarea>
@@ -21,6 +22,7 @@
     <button type="submit" class="button mt-5 is-primary">add comment</button>
   </div>
 </form>
+{{/if}}
 
 
 <div class="comments p-3 ml-3">
