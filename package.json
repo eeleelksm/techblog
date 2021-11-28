@@ -1,7 +1,7 @@
 {
   "name": "techblog.challenge14",
   "version": "1.0.0",
-  "description": "Module Challenge 14",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/eeleelksm/techblog.challenge14.git"
   },
-  "author": "Keshia-Lee Martin",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/eeleelksm/techblog.challenge14/issues"
@@ -19,10 +19,12 @@
   "homepage": "https://github.com/eeleelksm/techblog.challenge14#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.12.0-alpha.1"
+    "sequelize": "^6.11.0"
   }
 }
