@@ -4,7 +4,10 @@
       <div class="title is-size-4 m-0 mt-3">
         {{title}}
       </div>
-      <div class="meta">
+      <div>
+        {{blog_text}}
+      </div>
+      <div class="meta is-size-7">
         By {{user.username}} on {{created_at}}
         <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
       </div>

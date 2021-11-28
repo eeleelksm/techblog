@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   background-color: rgb(187, 216, 224);
 }
 
@@ -11,3 +11,11 @@ header {
   border-bottom: 2px solid darkblue;
 }
 
+footer {
+  border-top: 1px solid darkblue;
+  display: flex;
+  justify-content: center;
+  margin-top: 75%;
+  padding: 1%;
+  font-size: 95%;
+}
