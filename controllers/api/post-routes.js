@@ -1,9 +1,9 @@
 const router = require('express').Router();
-const { Blog_Post, User } = require('../../models');
+const { Post, User } = require('../../models');
 
 // get all users
 router.get('/', (req, res) => {
-  Blog_Post.findAll({
+  Post.findAll({
     attributes: ["id", "title", "blog_text", "created_at"],
     include: [
       {
@@ -20,7 +20,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:id', (req, res) => {
-  Blog_Post.findOne({
+  Post.findOne({
     where: {
       id: req.params.id
     },
@@ -46,7 +46,7 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  Blog_Post.create({
+  Post.create({
     title: req.body.title,
     blog_text: req.body.blog_text,
     user_id: req.body.user_id
@@ -59,7 +59,7 @@ router.post('/', (req, res) => {
 });
 
 router.put('/:id', (req, res) => {
-  Blog_Post.update(
+  Post.update(
     {
       title: req.body.title,
     },
