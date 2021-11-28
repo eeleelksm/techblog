@@ -1,4 +1,4 @@
-<article class="post">
+<article class="post p-3 ml-3">
   <div class="title is-size-5 m-0 mt-3">
     {{post.title}}
   </div>
@@ -10,4 +10,31 @@
     <a href="/post/{{id}}">{{post.comments.length}} comment(s)</a>
   </div>
 </article>
-</li>
+
+{{!-- Comment form --}}
+  <form class="comment-form mt-5 p-3 ml-3">
+  <div>
+    <textarea name="comment-body" class="textarea columns is-small"></textarea>
+  </div>
+
+  <div>
+    <button type="submit" class="button mt-5 is-primary">add comment</button>
+  </div>
+</form>
+
+
+<div class="comments p-3 ml-3">
+  {{#each post.comments}}
+  <section class="comment mt-5">
+    <div class="meta is-size-7">
+      By {{user.username}} on {{created_at}}
+    </div>
+    <div class="text mb-2">
+      {{comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>
+
+
+{{!-- <script src="/javascript/comment.js"></script> --}}
