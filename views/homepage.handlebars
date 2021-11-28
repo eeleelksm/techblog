@@ -1,16 +1,18 @@
-<ol class="post-list ml-3">
+<ol class="post-list p-3 ml-3">
+  {{#each posts as |post|}}
   <li>
     <article class="post">
-      <div class="title is-size-4 m-0 mt-3">
-        {{title}}
+      <div class="title is-size-5 m-0 mt-3">
+        {{post.title}}
       </div>
       <div>
-        {{blog_text}}
+        {{post.blog_text}}
       </div>
       <div class="meta is-size-7">
-        By {{user.username}} on {{created_at}}
-        <a href="/post/{{id}}">{{comments.length}} comment(s)</a>
+        By {{post.user.username}} on {{post.created_at}}
+        <a href="/post/{{id}}">{{post.comments.length}} comment(s)</a>
       </div>
     </article>
   </li>
+  {{/each}}
 </ol>
