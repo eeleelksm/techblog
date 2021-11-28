@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(187, 216, 224);
+}
+
+header {
+  font-family: 'Montserrat', sans-serif;
+  border-bottom: 2px solid darkblue;
+}
+
