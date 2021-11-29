@@ -6,8 +6,8 @@
     {{post.blog_text}}
   </div>
   <div class="meta is-size-7">
-    By {{post.user.username}} on {{post.created_at}}
-    {{post.comments.length}} comment(s)
+    By {{post.user.username}} on {{format_date post.created_at}}
+    {{post.comments.length}} {{format_plural "comment" comments.length}}
   </div>
 </article>
 

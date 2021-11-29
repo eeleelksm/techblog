@@ -2,7 +2,7 @@
   {{#each this}}
   <section class="comment mt-5">
     <div class="meta is-size-7">
-      By {{user.username}} on {{created_at}}
+      By {{user.username}} on {{format_date created_at}}
     </div>
     <div class="text mb-2">
       {{comment_text}}
