@@ -1,17 +1,20 @@
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <a href="/dashboard" class="m-4"> &larr; Back to dashboard</a>
+  
   <h3 class="mt-5 has-text-link is-size-4 ml-5 pl-2">Edit Post </h3>
   <form class="edit-post-form">
-    <div>
-      <input name="post-title" type="text" value="{{post.title}}" />
-      <span>({{format_url post.post_url}})</span>
+    <div class="column is-two-thirds">
+      <label for="post-title" class="ml-4">Title</label>
+      <input name="post-title" type="text" value="{{post.title}}" class="input ml-3 is-small"/>
     </div>
-    <div>
-      {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
-      |
-      <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+    <div class="column is-two-thirds">
+      <label for="post-text" class="ml-4">Blog Text</label>
+      <textarea name="post-text" value="{{post.blog_text}}" class="textarea ml-3  is-small"></textarea>
     </div>
-    <button type="submit" class="button is-primary">Save post</button>
+    <div>      
+      <a href="/post/{{post.id}}" class="ml-4 pl-3">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
+    </div>
+    <button type="submit" class="button is-primary ml-5">Save post</button>
     <button type="button" class="delete-post-btn button is-danger">Delete post</button>
   </form>
 </article>
