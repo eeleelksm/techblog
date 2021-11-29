@@ -1,0 +1,12 @@
+<div class="comments p-3 ml-3">
+  {{#each this}}
+  <section class="comment mt-5">
+    <div class="meta is-size-7">
+      By {{user.username}} on {{created_at}}
+    </div>
+    <div class="text mb-2">
+      {{comment_text}}
+    </div>
+  </section>
+  {{/each}}
+</div>

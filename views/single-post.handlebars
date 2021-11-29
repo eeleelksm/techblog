@@ -24,18 +24,6 @@
 </form>
 {{/if}}
 
-
-<div class="comments p-3 ml-3">
-  {{#each post.comments}}
-  <section class="comment mt-5">
-    <div class="meta is-size-7">
-      By {{user.username}} on {{created_at}}
-    </div>
-    <div class="text mb-2">
-      {{comment_text}}
-    </div>
-  </section>
-  {{/each}}
-</div>
+{{> comments post.comments}}
 
 <script src="/javascript/comment.js"></script>
