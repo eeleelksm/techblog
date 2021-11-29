@@ -59,7 +59,7 @@ router.get('/:id', (req, res) => {
 });
 
 // create a new post route
-router.post('/', (req, res) => {
+router.post('/', withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
     blog_text: req.body.blog_text,
@@ -73,7 +73,7 @@ router.post('/', (req, res) => {
 });
 
 // update a post route
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Post.update(
     {
       title: req.body.title,
