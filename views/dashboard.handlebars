@@ -1,5 +1,5 @@
 <section>
-  <h2 class="mt-5 has-text-link is-size-4">Create New Post</h2>
+  <h3 class="mt-5 has-text-link is-size-4 ml-5 pl-2">Create New Post</h3>
 
   <form class="new-post-form">
     <div class="column is-two-thirds">
@@ -13,3 +13,28 @@
     <button type="submit" class="button is-primary m-5 pl-3">Create</button>
   </form>
 </section>
+
+{{#if posts.length}}
+<section>
+  <h3 class="mt-5 has-text-link is-size-4 ml-4 pl-2">Your Posts</h3>
+  <ol class="post-list p-3 ml-3">
+    {{#each posts as |post|}}
+    <li>
+      <article class="post">
+        <div class="title is-size-5 m-0 mt-3">
+          <a href="/post/{{id}}">{{post.title}}</a>
+        </div>
+        <div>
+          {{post.blog_text}}
+        </div>
+        <div class="meta is-size-7">
+          By {{post.user.username}} on {{format_date post.created_at}}
+          <a href="/post/{{id}}">{{post.comments.length}} {{format_plural "comment" comments.length}}</a>
+        </div>
+      </article>
+      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+    </li>
+    {{/each}}
+  </ol>
+</section>
+{{/if}}
