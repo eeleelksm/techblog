@@ -9,6 +9,12 @@ The following application can be found here: https://desolate-reaches-61347.hero
 
 To run locally, after cloning repo and navigating to the root folder:
 
+```mysql -u root -p```
+
+```source db/schema.sql```
+
+```quit```
+
 ```npm run seeds```
 
 ```npm start```
